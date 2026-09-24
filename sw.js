@@ -14,7 +14,6 @@ const PRECACHE_URLS = [
   '/manifest.json'
 ];
 
-/* Install — cache file statis */
 self.addEventListener('install', (event) => {
   console.log('[SW] Installing...');
   event.waitUntil(
@@ -24,7 +23,6 @@ self.addEventListener('install', (event) => {
   );
 });
 
-/* Activate — hapus cache lama */
 self.addEventListener('activate', (event) => {
   console.log('[SW] Activating...');
   event.waitUntil(
@@ -32,6 +30,7 @@ self.addEventListener('activate', (event) => {
       return Promise.all(
         names.map((name) => {
           if (name !== CACHE_NAME && name !== RUNTIME_CACHE) {
+            console.log('[SW] Deleting old cache:', name);
             return caches.delete(name);
           }
         })
@@ -40,12 +39,10 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-/* Fetch — cache first, fallback network */
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   const url = new URL(request.url);
 
-  // Skip cross-origin (Firebase, Google Fonts, dll)
   if (url.origin !== location.origin) return;
   if (request.method !== 'GET') return;
 
@@ -61,7 +58,9 @@ self.addEventListener('fetch', (event) => {
         }
         return response;
       }).catch(() => {
-        if (request.mode === 'navigate') return caches.match('/index.html');
+        if (request.mode === 'navigate') {
+          return caches.match('/index.html');
+        }
       });
     })
   );
