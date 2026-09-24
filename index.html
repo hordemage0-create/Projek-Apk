@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PutzzPedia App</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="app-header">
+  <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+  <h1 class="app-title">Home</h1>
+  <div class="header-icons">
+    <span class="icon">👤</span>
+    <span class="icon">🔔</span>
+  </div>
+</header>
+
+<!-- ========== SIDEBAR ========== -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <h2>⚡ PutzzPedia</h2>
+    <button onclick="toggleSidebar()">✕</button>
+  </div>
+  <ul>
+    <li><a href="#">🏠 Home</a></li>
+    <li><a href="#">👤 Profile</a></li>
+    <li><a href="#">💬 Chat</a></li>
+    <li><a href="#">⚙️ Settings</a></li>
+  </ul>
+</aside>
+
+<!-- ========== MAIN CONTENT ========== -->
+<main class="app-main">
+
+  <!-- BANNER -->
+  <section class="banner">
+    <div class="banner-content">
+      <h2>Jester Project</h2>
+      <p>Sel, 15 Sep 2026</p>
+    </div>
+    <span class="banner-time">00:30 WIB</span>
+  </section>
+
+  <!-- PROFIL CARD -->
+  <section class="profile-card">
+    <div class="profile-left">
+      <div class="avatar-big">
+        <img src="https://i.pravatar.cc/150?img=12" alt="Avatar">
+      </div>
+      <div class="profile-info">
+        <span class="profile-label">SALAM,</span>
+        <h3 class="profile-name">Kurr</h3>
+        <p class="profile-role">DEVELOPER PALING GANTE...</p>
+      </div>
+    </div>
+    <button class="badge-owner">OWNER</button>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-row">
+    <div class="stat-badge green">
+      <span>🟢 GS - OWNER — LIFETIME</span>
+    </div>
+    <div class="stat-badge">
+      <span>📅 14/06/2026</span>
+    </div>
+  </section>
+
+  <section class="wallet-row">
+    <div class="wallet-badge">
+      <span>💳 Wallet: Rp 100.004.502</span>
+    </div>
+  </section>
+
+  <!-- STATUS SECTION -->
+  <section class="status-section">
+    <div class="section-header">
+      <h4>STATUS</h4>
+      <a href="#" class="link-purple">Lihat semua</a>
+    </div>
+    <div class="status-list">
+      <div class="status-item">
+        <div class="status-avatar add">
+          <span>+</span>
+        </div>
+        <p>Tambah</p>
+      </div>
+      <div class="status-item">
+        <div class="status-avatar">
+          <img src="https://i.pravatar.cc/150?img=20" alt="">
+        </div>
+        <p>kecotxxc</p>
+      </div>
+      <div class="status-item">
+        <div class="status-avatar">
+          <img src="https://i.pravatar.cc/150?img=25" alt="">
+        </div>
+        <p>aguslaparbuk</p>
+      </div>
+      <div class="status-item">
+        <div class="status-avatar">
+          <img src="https://i.pravatar.cc/150?img=30" alt="">
+        </div>
+        <p>BYFALAH</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOW PLAYING -->
+  <section class="now-playing">
+    <h4>NOW PLAYING</h4>
+    <div class="music-card">
+      <div class="music-icon">🎵</div>
+      <div class="music-info">
+        <p class="music-title">Belum ada lagu</p>
+        <p class="music-sub">Buka Music library</p>
+      </div>
+      <span class="arrow">›</span>
+    </div>
+  </section>
+
+</main>
+
+<!-- ========== GLOBAL CHAT BUTTON ========== -->
+<button class="global-chat-btn" onclick="openChat()">
+  🌐 <span>Global Chat</span>
+</button>
+
+<!-- ========== CHAT MODAL ========== -->
+<div class="chat-modal" id="chatModal">
+  <div class="chat-header">
+    <h3>💬 Global Chat</h3>
+    <button onclick="closeChat()">✕</button>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="chat-msg">
+      <strong>System:</strong>
+      <p>Selamat datang di Global Chat!</p>
+    </div>
+  </div>
+  <div class="chat-input">
+    <input type="text" id="chatInput" placeholder="Ketik pesan..." onkeypress="handleEnter(event)">
+    <button onclick="sendChat()">➤</button>
+  </div>
+</div>
+
+<!-- ========== FIREBASE SDK ========== -->
+<script type="module" src="firebase.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
