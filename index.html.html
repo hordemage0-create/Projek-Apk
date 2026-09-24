@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>⚡ Toko Panel Putzz Pedia — Auto Order</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#00bfff">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="bg-lightning"></div>
+<div class="bg-particles" id="bgParticles"></div>
+
+<!-- ========== HEADER ========== -->
+<header class="app-header">
+  <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+  <div class="header-badge">PUTZZ PEDIA DEV</div>
+  <div class="header-right">
+    <div id="authSlot"></div>
+  </div>
+</header>
+
+<!-- ========== SIDEBAR ========== -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <h2>⚡ PutzzPedia</h2>
+    <button onclick="toggleSidebar()">✕</button>
+  </div>
+  <ul>
+    <li><a href="#hero" onclick="toggleSidebar()">🏠 Home</a></li>
+    <li><a href="#fitur" onclick="toggleSidebar()">⚡ Fitur</a></li>
+    <li><a href="#produk" onclick="toggleSidebar()">🛒 Produk</a></li>
+    <li><a href="#bot" onclick="toggleSidebar()">🤖 Bot</a></li>
+    <li><a href="#kontak" onclick="toggleSidebar()">💬 Kontak</a></li>
+  </ul>
+  <div class="sidebar-footer" id="sidebarAuth"></div>
+</aside>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <div class="hero-label">PUTZZ PEDIA DEV</div>
+    <h1 class="hero-title">
+      <span class="line-1">Toko Panel</span>
+      <span class="line-2">Putzz Pedia</span>
+      <span class="line-3">AUTO ORDER</span>
+    </h1>
+    <p class="hero-sub">SOLUSI BOT TOKO DIGITAL SERBA OTOMATIS</p>
+    <div class="hero-actions">
+      <a href="#produk" class="btn-primary">🛒 Lihat Produk</a>
+      <a href="https://wa.me/62881011760799?text=Halo%20admin%2C%20saya%20mau%20order" target="_blank" class="btn-secondary">⚡ Order Sekarang</a>
+    </div>
+  </div>
+  <div class="hero-robot">
+    <div class="robot-head">
+      <div class="robot-eye left"></div>
+      <div class="robot-eye right"></div>
+      <div class="robot-mouth"></div>
+    </div>
+    <div class="robot-body">
+      <div class="robot-logo">⚡</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FITUR ========== -->
+<section class="fitur" id="fitur">
+  <h2 class="section-title">⚡ FITUR UNGGULAN</h2>
+  <div class="fitur-grid">
+    <div class="fitur-card">
+      <div class="fitur-icon">⚡</div>
+      <h3>SCRIPT RINGAN</h3>
+      <p>Performa cepat & stabil</p>
+    </div>
+    <div class="fitur-card">
+      <div class="fitur-icon">🛡️</div>
+      <h3>AMAN & TERPERCAYA</h3>
+      <p>Database aman & anti error</p>
+    </div>
+    <div class="fitur-card">
+      <div class="fitur-icon">🤖</div>
+      <h3>AUTO ORDER 24 JAM</h3>
+      <p>Transaksi otomatis tanpa henti</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FITUR ADMIN ========== -->
+<section class="fitur-admin">
+  <h2 class="section-title">👑 FITUR ADMIN LENGKAP</h2>
+  <div class="admin-grid">
+    <div class="admin-col">
+      <div class="admin-item">✅ Add Produk</div>
+      <div class="admin-item">✅ Delete Produk</div>
+      <div class="admin-item">✅ Add Stok</div>
+      <div class="admin-item">✅ Delete Stok</div>
+      <div class="admin-item">✅ Kelola Kategori</div>
+      <div class="admin-item">✅ Broadcast Pesan</div>
+    </div>
+    <div class="admin-col">
+      <div class="admin-item">✅ Kelola Order</div>
+      <div class="admin-item">✅ Riwayat Transaksi</div>
+      <div class="admin-item">✅ Manajemen User</div>
+      <div class="admin-item">✅ Statistik Toko</div>
+      <div class="admin-item">✅ Pengaturan Bot</div>
+      <div class="admin-item">✅ Dan Lainnya!</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== PREVIEW BOT ========== -->
+<section class="bot-preview" id="bot">
+  <h2 class="section-title">🤖 PREVIEW BOT</h2>
+  <div class="phone-mockup">
+    <div class="phone-header">
+      <div class="phone-avatar">🤖</div>
+      <div class="phone-info">
+        <div class="phone-name">Toko Panel Bot</div>
+        <div class="phone-status">bot • online</div>
+      </div>
+    </div>
+    <div class="phone-chat">
+      <div class="chat-bubble bot">⚡ Selamat Datang di Toko PutzzPedia ⚡</div>
+      <div class="chat-bubble bot">📋 MENU UTAMA<br>1. 💀 Order Panel<br>2. 🖥️ Order VPS<br>3. 📦 Pesanan Saya<br>4. 💬 Chat Admin</div>
+      <div class="chat-bubble user">1</div>
+      <div class="chat-bubble bot">💀 PILIH PAKET PANEL<br>1. Panel 1GB — Rp500<br>2. Panel 2GB — Rp1.000<br>...</div>
+    </div>
+    <div class="phone-footer">💬 Ketik pesan...</div>
+  </div>
+</section>
+
+<!-- ========== PRODUK ========== -->
+<section class="produk" id="produk">
+  <h2 class="section-title">🛒 PRODUK KAMI</h2>
+
+  <div class="produk-tabs">
+    <button class="produk-tab active" onclick="switchTab('panel', this)">💀 Panel Pterodactyl</button>
+    <button class="produk-tab" onclick="switchTab('vps', this)">🖥️ VPS Digital Ocean</button>
+  </div>
+
+  <div class="produk-grid" id="produkGrid"></div>
+</section>
+
+<!-- ========== KONTAK ========== -->
+<section class="kontak" id="kontak">
+  <h2 class="section-title">💬 HUBUNGI KAMI</h2>
+  <div class="kontak-grid">
+    <a href="https://wa.me/62881011760799" target="_blank" class="kontak-card wa">
+      <div class="kontak-icon">💬</div>
+      <div class="kontak-info"><h4>WHATSAPP</h4><p>0881011760799</p></div>
+    </a>
+    <a href="https://t.me/PutzzPedia" target="_blank" class="kontak-card tg">
+      <div class="kontak-icon">📢</div>
+      <div class="kontak-info"><h4>TELEGRAM</h4><p>@PutzzPedia</p></div>
+    </a>
+  </div>
+</section>
+
+<footer class="app-footer">
+  <p>⚡ OTOMATIS - CEPAT - AMAN - TERPERCAYA ⚡</p>
+  <p class="copyright">© 2026 Putzz Pedia Dev</p>
+</footer>
+
+<a href="https://wa.me/62881011760799" target="_blank" class="float-wa">💬</a>
+
+<!-- ======================================================
+     MODAL LOGIN
+     ====================================================== -->
+<div class="modal-overlay" id="modalLogin">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal('modalLogin')">✕</button>
+    <div class="modal-header">
+      <div class="modal-icon">🔐</div>
+      <h3>LOGIN</h3>
+      <p>Masuk ke akun PutzzPedia kamu</p>
+    </div>
+    <div class="auth-alert" id="loginAlert"></div>
+    <button class="google-btn" onclick="loginWithGoogle()">
+      <svg width="22" height="22" viewBox="0 0 48 48" style="margin-right:10px;">
+        <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+        <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+        <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+        <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+      </svg>
+      Login dengan Google
+    </button>
+  </div>
+</div>
+
+<!-- ======================================================
+     MODAL ORDER PANEL
+     ====================================================== -->
+<div class="modal-overlay" id="modalOrderPanel">
+  <div class="modal-box modal-order">
+    <button class="modal-close" onclick="closeModal('modalOrderPanel')">✕</button>
+    <div class="modal-header">
+      <div class="modal-icon">💀</div>
+      <h3>ORDER PANEL</h3>
+      <p id="orderPanelInfo">-</p>
+    </div>
+    <div class="form-group">
+      <label for="panelUsername">Username Panel</label>
+      <input type="text" id="panelUsername" placeholder="Contoh: putzzpedia" />
+      <small class="error" id="panelUsernameErr"></small>
+    </div>
+    <div class="form-group">
+      <label for="panelRam">RAM Panel</label>
+      <input type="text" id="panelRam" readonly />
+    </div>
+    <div class="form-group">
+      <label for="panelWa">Nomor WhatsApp Kamu</label>
+      <input type="tel" id="panelWa" placeholder="08xxxxxxxxxx" />
+      <small class="error" id="panelWaErr"></small>
+    </div>
+    <div class="form-group">
+      <label for="panelCatatan">Catatan (opsional)</label>
+      <textarea id="panelCatatan" placeholder="Contoh: minta bonus, dll"></textarea>
+    </div>
+    <button class="btn-submit" onclick="submitOrderPanel()">⚡ ORDER SEKARANG ⚡</button>
+  </div>
+</div>
+
+<!-- ======================================================
+     MODAL ORDER VPS
+     ====================================================== -->
+<div class="modal-overlay" id="modalOrderVPS">
+  <div class="modal-box modal-order">
+    <button class="modal-close" onclick="closeModal('modalOrderVPS')">✕</button>
+    <div class="modal-header">
+      <div class="modal-icon">🖥️</div>
+      <h3>ORDER VPS</h3>
+      <p id="orderVPSInfo">-</p>
+    </div>
+    <div class="form-group">
+      <label for="vpsUsername">Username VPS</label>
+      <input type="text" id="vpsUsername" placeholder="Contoh: putzzpedia" />
+      <small class="error" id="vpsUsernameErr"></small>
+    </div>
+    <div class="form-group">
+      <label for="vpsRam">RAM VPS</label>
+      <input type="text" id="vpsRam" readonly />
+    </div>
+    <div class="form-group">
+      <label>Pilih Request Domain Panel</label>
+      <div class="domain-list" id="domainList"></div>
+    </div>
+    <div class="form-group">
+      <label for="vpsWa">Nomor WhatsApp Kamu</label>
+      <input type="tel" id="vpsWa" placeholder="08xxxxxxxxxx" />
+      <small class="error" id="vpsWaErr"></small>
+    </div>
+    <div class="form-group">
+      <label for="vpsCatatan">Catatan (opsional)</label>
+      <textarea id="vpsCatatan" placeholder="Contoh: minta bonus, dll"></textarea>
+    </div>
+    <button class="btn-submit" onclick="submitOrderVPS()">⚡ ORDER SEKARANG ⚡</button>
+  </div>
+</div>
+
+<!-- ======================================================
+     MODAL SUKSES
+     ====================================================== -->
+<div class="modal-overlay" id="modalSuccess">
+  <div class="modal-box modal-success">
+    <div class="success-icon">✅</div>
+    <h3>ORDER BERHASIL!</h3>
+    <p class="success-sub">Order kamu sedang diproses</p>
+    <div class="credential-box" id="credentialBox"></div>
+    <button class="btn-submit" onclick="closeModal('modalSuccess')">✕ TUTUP</button>
+  </div>
+</div>
+
+<!-- ========== FIREBASE ========== -->
+<script type="module" src="firebase.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

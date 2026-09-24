@@ -1,0 +1,40 @@
+{
+  "name": "PutzzPedia — VPS & Panel Pterodactyl",
+  "short_name": "PutzzPedia",
+  "description": "Toko Panel Pterodactyl & VPS Digital Ocean. Auto order 24 jam.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#050510",
+  "theme_color": "#00bfff",
+  "lang": "id",
+  "dir": "ltr",
+  "categories": ["shopping", "business"],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
