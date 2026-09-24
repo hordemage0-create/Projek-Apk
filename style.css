@@ -79,7 +79,6 @@ body {
 }
 .header-right { display: flex; gap: 8px; align-items: center; }
 
-/* Auth button */
 .auth-login-btn {
   padding: 8px 16px;
   background: transparent;
@@ -188,11 +187,6 @@ body {
   color: var(--blue-bright); letter-spacing: 3px;
   margin-bottom: 24px;
   box-shadow: 0 0 20px rgba(0, 191, 255, 0.5);
-  animation: glow-pulse 2s infinite alternate;
-}
-@keyframes glow-pulse {
-  0% { box-shadow: 0 0 10px rgba(0, 191, 255, 0.4); }
-  100% { box-shadow: 0 0 30px rgba(0, 191, 255, 0.8); }
 }
 .hero-title {
   font-family: 'Orbitron', sans-serif;
@@ -203,7 +197,6 @@ body {
 .hero-title .line-1 {
   display: block; color: #fff;
   text-shadow: 0 0 10px #fff, 0 0 30px var(--blue), 0 0 60px var(--blue);
-  animation: text-glow 2s infinite alternate;
 }
 .hero-title .line-2 {
   display: block; color: var(--blue-bright);
@@ -212,10 +205,6 @@ body {
 .hero-title .line-3 {
   display: block; color: #fff; font-style: italic;
   text-shadow: 0 0 10px #fff, 0 0 30px var(--blue), 0 0 60px var(--blue);
-}
-@keyframes text-glow {
-  0% { text-shadow: 0 0 10px #fff, 0 0 30px var(--blue), 0 0 60px var(--blue); }
-  100% { text-shadow: 0 0 15px #fff, 0 0 45px var(--blue), 0 0 90px var(--blue); }
 }
 .hero-sub {
   font-family: 'Orbitron', sans-serif;
@@ -306,7 +295,7 @@ body {
 }
 .robot-logo { font-size: 2.5rem; filter: drop-shadow(0 0 15px var(--blue)); }
 
-/* ========== SECTION ========== */
+/* ========== SECTION TITLE ========== */
 .section-title {
   font-family: 'Orbitron', sans-serif;
   font-size: clamp(1.3rem, 4vw, 2rem);
@@ -650,12 +639,9 @@ body {
 }
 .modal-header p { color: var(--text-dim); font-size: 0.85rem; }
 
-/* Google button */
 .google-btn {
-  width: 100%;
-  padding: 14px;
-  background: #fff;
-  border: none;
+  width: 100%; padding: 14px;
+  background: #fff; border: none;
   border-radius: 12px;
   color: #333;
   font-family: 'Rajdhani', sans-serif;
@@ -669,7 +655,7 @@ body {
   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
 }
 
-/* Form */
+/* ========== FORM ========== */
 .form-group { margin-bottom: 16px; }
 .form-group label {
   display: block;
@@ -704,31 +690,22 @@ body {
   font-weight: 700;
   cursor: not-allowed;
 }
-.form-group textarea {
-  resize: vertical;
-  min-height: 70px;
-}
+.form-group textarea { resize: vertical; min-height: 70px; }
 .form-group .error {
-  display: block;
-  color: var(--red);
-  font-size: 0.75rem;
-  font-weight: 700;
-  margin-top: 4px;
-  min-height: 14px;
+  display: block; color: var(--red);
+  font-size: 0.75rem; font-weight: 700;
+  margin-top: 4px; min-height: 14px;
 }
 
 .btn-submit {
-  width: 100%;
-  padding: 14px;
+  width: 100%; padding: 14px;
   background: var(--blue);
-  border: none;
-  border-radius: 12px;
+  border: none; border-radius: 12px;
   color: #000;
   font-family: 'Orbitron', sans-serif;
   font-weight: 900; font-size: 0.9rem;
   letter-spacing: 3px;
-  cursor: pointer;
-  transition: 0.3s;
+  cursor: pointer; transition: 0.3s;
   box-shadow: 0 0 25px var(--blue);
   margin-top: 8px;
 }
@@ -741,12 +718,17 @@ body {
   cursor: not-allowed;
 }
 
-/* Domain list */
+/* ========== DOMAIN LIST ========== */
 .domain-list {
   display: flex; flex-direction: column;
   gap: 8px; margin-top: 8px;
-  max-height: 240px; overflow-y: auto;
+  max-height: 320px; overflow-y: auto;
   padding-right: 4px;
+}
+.domain-list::-webkit-scrollbar { width: 4px; }
+.domain-list::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 4px;
 }
 .domain-item {
   padding: 12px 14px;
@@ -779,11 +761,9 @@ body {
   font-size: 0.9rem;
   color: var(--text);
 }
-.domain-item.disabled .domain-name {
-  color: #ff8fa3;
-}
+.domain-item.disabled .domain-name { color: #ff8fa3; }
 
-/* Success */
+/* ========== SUCCESS MODAL ========== */
 .modal-success { text-align: center; }
 .success-icon {
   width: 80px; height: 80px;
@@ -835,17 +815,7 @@ body {
   max-width: 60%;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .hero { min-height: 80vh; padding: 40px 16px; }
-  .admin-grid { grid-template-columns: 1fr; padding: 20px; }
-  .produk-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
-  .produk-tabs { flex-direction: column; }
-  .hero-robot { transform: scale(0.8); }
-  .modal-box { padding: 24px 18px; }
-  .auth-user .uname { max-width: 60px; font-size: 0.7rem; }
-}
-/* ========== PWA INSTALL BUTTON ========== */
+/* ========== PWA ========== */
 @keyframes installPulse {
   0%, 100% {
     transform: scale(1);
@@ -857,14 +827,13 @@ body {
   }
 }
 
-#installBtn:hover {
-  transform: scale(1.08);
-}
-
-/* ========== STANDALONE MODE (saat dibuka dari home screen) ========== */
-@media all and (display-mode: standalone) {
-  body {
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
-  }
+/* ========== RESPONSIVE ========== */
+@media (max-width: 600px) {
+  .hero { min-height: 80vh; padding: 40px 16px; }
+  .admin-grid { grid-template-columns: 1fr; padding: 20px; }
+  .produk-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+  .produk-tabs { flex-direction: column; }
+  .hero-robot { transform: scale(0.8); }
+  .modal-box { padding: 24px 18px; }
+  .auth-user .uname { max-width: 60px; font-size: 0.7rem; }
 }
