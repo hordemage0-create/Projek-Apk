@@ -17,7 +17,6 @@
 <div class="bg-lightning"></div>
 <div class="bg-particles" id="bgParticles"></div>
 
-<!-- ========== HEADER ========== -->
 <header class="app-header">
   <button class="menu-btn" onclick="toggleSidebar()">☰</button>
   <div class="header-badge">PUTZZ PEDIA DEV</div>
@@ -26,7 +25,6 @@
   </div>
 </header>
 
-<!-- ========== SIDEBAR ========== -->
 <aside class="sidebar" id="sidebar">
   <div class="sidebar-header">
     <h2>⚡ PutzzPedia</h2>
@@ -42,7 +40,6 @@
   <div class="sidebar-footer" id="sidebarAuth"></div>
 </aside>
 
-<!-- ========== HERO ========== -->
 <section class="hero" id="hero">
   <div class="hero-glow"></div>
   <div class="hero-content">
@@ -70,7 +67,6 @@
   </div>
 </section>
 
-<!-- ========== FITUR ========== -->
 <section class="fitur" id="fitur">
   <h2 class="section-title">⚡ FITUR UNGGULAN</h2>
   <div class="fitur-grid">
@@ -92,7 +88,6 @@
   </div>
 </section>
 
-<!-- ========== FITUR ADMIN ========== -->
 <section class="fitur-admin">
   <h2 class="section-title">👑 FITUR ADMIN LENGKAP</h2>
   <div class="admin-grid">
@@ -115,7 +110,6 @@
   </div>
 </section>
 
-<!-- ========== PREVIEW BOT ========== -->
 <section class="bot-preview" id="bot">
   <h2 class="section-title">🤖 PREVIEW BOT</h2>
   <div class="phone-mockup">
@@ -136,19 +130,15 @@
   </div>
 </section>
 
-<!-- ========== PRODUK ========== -->
 <section class="produk" id="produk">
   <h2 class="section-title">🛒 PRODUK KAMI</h2>
-
   <div class="produk-tabs">
     <button class="produk-tab active" onclick="switchTab('panel', this)">💀 Panel Pterodactyl</button>
     <button class="produk-tab" onclick="switchTab('vps', this)">🖥️ VPS Digital Ocean</button>
   </div>
-
   <div class="produk-grid" id="produkGrid"></div>
 </section>
 
-<!-- ========== KONTAK ========== -->
 <section class="kontak" id="kontak">
   <h2 class="section-title">💬 HUBUNGI KAMI</h2>
   <div class="kontak-grid">
@@ -170,9 +160,7 @@
 
 <a href="https://wa.me/62881011760799" target="_blank" class="float-wa">💬</a>
 
-<!-- ======================================================
-     MODAL LOGIN
-     ====================================================== -->
+<!-- MODAL LOGIN -->
 <div class="modal-overlay" id="modalLogin">
   <div class="modal-box">
     <button class="modal-close" onclick="closeModal('modalLogin')">✕</button>
@@ -181,7 +169,6 @@
       <h3>LOGIN</h3>
       <p>Masuk ke akun PutzzPedia kamu</p>
     </div>
-    <div class="auth-alert" id="loginAlert"></div>
     <button class="google-btn" onclick="loginWithGoogle()">
       <svg width="22" height="22" viewBox="0 0 48 48" style="margin-right:10px;">
         <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
@@ -194,9 +181,7 @@
   </div>
 </div>
 
-<!-- ======================================================
-     MODAL ORDER PANEL
-     ====================================================== -->
+<!-- MODAL ORDER PANEL -->
 <div class="modal-overlay" id="modalOrderPanel">
   <div class="modal-box modal-order">
     <button class="modal-close" onclick="closeModal('modalOrderPanel')">✕</button>
@@ -227,9 +212,7 @@
   </div>
 </div>
 
-<!-- ======================================================
-     MODAL ORDER VPS
-     ====================================================== -->
+<!-- MODAL ORDER VPS -->
 <div class="modal-overlay" id="modalOrderVPS">
   <div class="modal-box modal-order">
     <button class="modal-close" onclick="closeModal('modalOrderVPS')">✕</button>
@@ -264,9 +247,7 @@
   </div>
 </div>
 
-<!-- ======================================================
-     MODAL SUKSES
-     ====================================================== -->
+<!-- MODAL SUKSES -->
 <div class="modal-overlay" id="modalSuccess">
   <div class="modal-box modal-success">
     <div class="success-icon">✅</div>
@@ -277,7 +258,6 @@
   </div>
 </div>
 
-<!-- ========== FIREBASE ========== -->
 <script type="module" src="firebase.js"></script>
 <script src="app.js"></script>
 </body>
